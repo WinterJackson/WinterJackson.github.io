@@ -1,4 +1,4 @@
-# Personal Portfolio - Winter Jackson
+# Winter Jackson
 
 Welcome to my personal portfolio repository! Here you'll find everything you need to know about me, my skills, projects, and how to get in touch.
 
