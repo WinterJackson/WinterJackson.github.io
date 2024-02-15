@@ -17,7 +17,7 @@ Click on the link below to check out my portfolio:
 Feel free to reach out to me if you have any questions, project ideas, or collaboration opportunities!
 
 - LinkedIn: Winter Jackson (https://www.linkedin.com/in/winter-jackson-454843178/)
-- Website: [Your Portfolio Website](link)
+- Website: Portfolio Website (https://winterjackson.github.io/)
 
 ## License
 
