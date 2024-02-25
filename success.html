@@ -45,13 +45,24 @@
                 </p>
                 <span>I will reply to you shortly. Keep calm.</span>
 
-                <button class="form-btn" onclick="goBack()">Go Back!</button>
-
             </section>
+            <button class="back-btn" onclick="goBack()">Go Back!</button>
 
         </div>
     </div>
 
+    <div class="copyright"> 
+        <div class="cc-text">
+            <p>All Rights Reserved. &copy; <em id="currentYear">2020</em> | W.J</p>
+        </div>
+    </div>
+
+    <script>
+        const spanYear = document.querySelector('#currentYear');
+        const currentYear = new Date();
+        spanYear.innerText = currentYear.getFullYear();
+    </script>
+    
     <script>
         function goBack() {
             window.location.href = "https://winterjackson.github.io/";
