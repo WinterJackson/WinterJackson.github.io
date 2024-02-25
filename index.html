@@ -1022,12 +1022,21 @@
         </div>
 
     </main>
+    <div class="copyright"> 
+        <div class="cc-text">
+            <p>All Rights Reserved. &copy; <em id="currentYear">2020</em> | W.J</p>
+        </div>
+    </div>
 
     <!--
     - custom js link
     -->
     <script src="./assets/js/script.js"></script>
-
+    <script>
+        const spanYear = document.querySelector('#currentYear');
+        const currentYear = new Date();
+        spanYear.innerText = currentYear.getFullYear();
+    </script>
     <!--
     - ionicon link
     -->
