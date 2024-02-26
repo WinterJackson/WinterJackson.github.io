@@ -144,6 +144,27 @@ body {
   opacity: 0.9; 
 }
 
+section {
+  display: grid;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(3px);
+  transition: all 700ms;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+}
+
+@media(prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
 .copyright {
   margin-bottom: 85px;
   padding-left: 10px;
