@@ -138,7 +138,14 @@ html { font-family: var(--ff-poppins); }
 body { 
   background-attachment: fixed;
   background-size: cover;
-  background-image: linear-gradient(#ff000028, rgba(0, 0, 0, 0.95)), url('../images/quizz.jpg');
+  background-image: linear-gradient(#ff000028, rgba(0, 0, 0, 0.95)), 
+    /* Provide multiple image sources with different formats */
+    image-set(
+      /* WebP format */
+      url('../images/quizz.webp') type('image/webp'), 
+      /* JPG format */
+      url('../images/quizz.jpg') type('image/jpeg')
+    );
   background-position: center right;
   background-repeat: no-repeat;
   opacity: 0.9; 
