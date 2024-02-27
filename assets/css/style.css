@@ -594,6 +594,7 @@ main {
 .about .article-title { margin-bottom: 15px; }
 
 .about-text {
+  background-color: lime;
   color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
