@@ -365,7 +365,7 @@ main {
   width: 220px;
   height: 220px;
   position: relative;
-  padding: 10px;
+  padding: 15px;
 }
 
 .box::before {
@@ -394,7 +394,7 @@ main {
   height: 100%;
   transition: border-radius 1s ease-out;
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  animation: morph 8s ease-in-out infinite both alternate;
+  animation: morph 25s ease-in-out infinite both alternate;
   position: absolute;
   overflow: hidden;
   z-index: 5;
@@ -416,8 +416,15 @@ main {
 }
 
 @keyframes morph {
-  0% {border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;} 
-  100% {border-radius: 40% 60%;} 
+  0% {
+    border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
+  } 
+  50% {
+    border-radius: 60% 40% 40% 60% / 50% 30% 60% 50%;
+  }
+  100% {
+    border-radius: 40% 60%;
+  } 
 }
 
 @keyframes spin {
@@ -491,6 +498,34 @@ main {
 .sidebar.active .sidebar-info_more {
   opacity: 1;
   visibility: visible;
+}
+
+.slide-in-right {
+  animation: slideRight 3s ease forwards;
+}
+
+@keyframes slideRight {
+  0%{
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 3.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 
 .contacts-list {
@@ -717,6 +752,20 @@ main {
   mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent)
 }
 
+.slider-title1 {
+  z-index: 2;
+}
+
+.slider-title1 p {
+  color: var(--white-2);
+  border-radius: 5px;
+  z-index: 2;
+  font-size: clamp(12px, 13px, 15px);
+  font-weight: bold;
+  padding: 5px;
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
 .slider-lang::-webkit-scrollbar {
   width: 15px;
   border: 5px solid var(--smoky-black);
@@ -759,6 +808,7 @@ main {
   transition: var(--transition-1);
   max-height:100px;
   min-width: 100px;
+  border-radius: 10px;
 }
 
 .languages-items-wrap p {
@@ -766,6 +816,7 @@ main {
   margin-top: 2px;
   background: rgba(0, 0, 0, 0.336);
   color: white;
+  border-radius: 10px;
 }
 
 .slider-others {
@@ -789,6 +840,22 @@ main {
   );
   mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent)
 }
+
+.slider-title2 {
+  z-index: 2;
+}
+
+.slider-title2 p {
+  color: var(--white-2);
+  border-radius: 5px;
+  text-wrap: nowrap;
+  z-index: 2;
+  font-size: clamp(12px, 13px, 15px);
+  font-weight: bold;
+  padding: 5px;
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
 
 .slider-others::-webkit-scrollbar {
   width: 15px;
@@ -832,6 +899,7 @@ main {
   transition: var(--transition-1);
   max-height:100px;
   min-width: 100px;
+  border-radius: 10px;
 }
 
 .others-items-wrap p {
@@ -839,6 +907,7 @@ main {
   margin-top: 2px;
   background: rgba(0, 0, 0, 0.336);
   color: white;
+  border-radius: 10px;
 }
 
 
@@ -874,7 +943,7 @@ main {
   top: 0;
   left: 0;
   transform: translate(15px, -25px);
-  background: var(--eerie-black-1);
+  background: var(--bg-gradient-onyx);
   border-radius: 10px;
   box-shadow: var(--shadow-1);
 }
@@ -1328,7 +1397,7 @@ main {
   width: 100%;
   padding: 6px;
   border: 1px solid var(--jet);
-  border-radius: 14px;
+  border-radius: 10px;
   z-index: 2;
   opacity: 0;
   visibility: hidden;
@@ -1385,7 +1454,7 @@ main {
   position: relative;
   width: 100%;
   height: 200px;
-  border-radius: 16px;
+  border-radius: 10px;
   overflow: hidden;
   margin-bottom: 15px;
 }
@@ -1406,7 +1475,6 @@ main {
 
 .project-item-icon-box {
   --scale: 0.8;
-
   background: var(--jet);
   color: #FF0000;
   position: absolute;
@@ -1415,7 +1483,7 @@ main {
   transform: translate(-50%, -50%) scale(var(--scale));
   font-size: 20px;
   padding: 18px;
-  border-radius: 12px;
+  border-radius: 10px;
   opacity: 0;
   z-index: 1;
   transition: var(--transition-1);
@@ -1461,7 +1529,7 @@ main {
   position: relative;
   height: 250px;
   width: 100%;
-  border-radius: 16px;
+  border-radius: 10px;
   margin-bottom: 30px;
   border: 1px solid var(--jet);
   overflow: hidden;
@@ -1492,7 +1560,7 @@ main {
   font-weight: var(--fw-400);
   padding: 13px 20px;
   border: 1px solid var(--jet);
-  border-radius: 14px;
+  border-radius: 10px;
   outline: none;
   border: 1px solid rgba(255, 255, 255, 0.322);
 }
@@ -1523,7 +1591,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   align-items: center;
   gap: 10px;
   padding: 13px 20px;
-  border-radius: 14px;
+  border-radius: 10px;
   font-size: var(--fs-6);
   text-transform: capitalize;
   box-shadow: var(--shadow-3);
@@ -1836,7 +1904,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   .icon-box {
     width: 48px;
     height: 48px;
-    border-radius: 12px;
+    border-radius: 10px;
     font-size: 18px;
   }
 
@@ -1898,8 +1966,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   /**
    * #NAVBAR
    */
-
-  .navbar { border-radius: 20px 20px 0 0; }
 
   .navbar-list { gap: 20px; }
 
@@ -1979,7 +2045,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     align-items: stretch;
     gap: 25px;
     padding: 30px;
-    border-radius: 20px;
+    border-radius: 10px;
   }
 
   .modal-img-wrapper {
@@ -1989,7 +2055,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .modal-avatar-box {
-    border-radius: 18px;
+    border-radius: 10px;
     margin-bottom: 0;
   }
 
@@ -2034,7 +2100,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    * #PORTFOLIO, BLOG
    */
 
-  .project-img { border-radius: 16px; }
+  .project-img { border-radius: 10px; }
 
 
   /**
@@ -2043,7 +2109,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .mapbox {
     height: 380px;
-    border-radius: 18px;
+    border-radius: 10px;
   }
 
   .input-wrapper {
@@ -2242,7 +2308,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     left: auto;
     right: 0;
     width: max-content;
-    border-radius: 0 20px;
     padding: 0 20px;
     box-shadow: none;
   }
