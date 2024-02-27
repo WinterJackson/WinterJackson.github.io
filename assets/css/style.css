@@ -683,6 +683,12 @@ main {
  * #languages 
  */
 
+.lang-text {
+  color: var(--light-gray);
+  background: rgba(0, 0, 0, 0.336);
+  padding: 10px;
+}
+
 .slider-wrap {
   display: grid;
   grid-template-columns: 1fr;
@@ -692,14 +698,48 @@ main {
   
 .slider-lang {
   width: 100%;
-  max-height: 135px;
+  max-height: 175px;
   position: relative;
   box-shadow: 0 10px 20px -10px rgba(0,0,0,0.2);
   display: flex;
   gap: 10px;
   overflow: hidden;
+  overflow-x: scroll;
   border-radius: 10px;
   margin-top: 1rem;
+  -webkit-mask: linear-gadient (
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent)
+}
+
+.slider-lang::-webkit-scrollbar {
+  width: 15px;
+  border: 5px solid var(--smoky-black);
+  background: #ff00007e;
+  border-radius: 20px;
+  box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
+              inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
+}
+
+.slider-lang::-webkit-scrollbar-track {
+  background: var(--smoky-black);
+}
+
+.slider-lang::-webkit-scrollbar-thumb {
+  border: 5px solid var(--smoky-black);
+  background: #ff00007e;
+  border-radius: 20px;
+  box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
+              inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
+}
+
+.slider-lang::-webkit-scrollbar-button {
+  height: 100%;
 }
 
 .slider-lang:hover .languages-items-wrap {
@@ -730,7 +770,7 @@ main {
 
 .slider-others {
   width: 100%;
-  max-height: 100px;
+  max-height: 175px;
   position: relative;
   box-shadow: 0 10px 20px -10px rgba(0,0,0,0.2);
   display: flex;
@@ -738,6 +778,40 @@ main {
   overflow: hidden;
   border-radius: 10px;
   margin-top: 1rem;
+  overflow-x: scroll;
+  -webkit-mask: linear-gadient (
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent)
+}
+
+.slider-others::-webkit-scrollbar {
+  width: 15px;
+  border: 5px solid var(--smoky-black);
+  background: #ff00007e;
+  border-radius: 20px;
+  box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
+              inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
+}
+
+.slider-others::-webkit-scrollbar-track {
+  background: var(--smoky-black);
+}
+
+.slider-others::-webkit-scrollbar-thumb {
+  border: 5px solid var(--smoky-black);
+  background: #ff00007e;
+  border-radius: 20px;
+  box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
+              inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
+}
+
+.slider-others::-webkit-scrollbar-button {
+  height: 100%;
 }
 
 .slider-others:hover .others-items-wrap {
@@ -1002,6 +1076,14 @@ main {
   overflow: hidden;
   border-radius: 10px;
   margin-top: 1rem;
+  -webkit-mask: linear-gadient (
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent)
 }
 
 .client-items-wrap {
@@ -1031,7 +1113,6 @@ main {
   height: auto;
   padding: 0 10px 0 10px;
   background: rgba(0, 0, 0, 0.336);
-  filter: grayscale(1);
   transition: var(--transition-1);
 }
 
