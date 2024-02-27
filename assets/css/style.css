@@ -689,6 +689,10 @@ main {
   padding: 10px;
 }
 
+.languages-title {
+  margin-bottom: 20px;
+}
+
 .slider-wrap {
   display: grid;
   grid-template-columns: 1fr;
@@ -707,6 +711,7 @@ main {
   overflow-x: scroll;
   border-radius: 10px;
   margin-top: 1rem;
+  margin-bottom: 1rem;
   -webkit-mask: linear-gadient (
     90deg,
     transparent,
