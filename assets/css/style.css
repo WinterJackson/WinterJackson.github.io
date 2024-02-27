@@ -1204,6 +1204,8 @@ main {
 .list-style {
   color: var(--light-gray);
   list-style: disc;
+  padding-top: 5px;
+  margin-left: 15px;
 }
 
 .download-div {
@@ -1633,9 +1635,19 @@ textarea.form-input::-webkit-resizer { display: none; }
     padding: 40px;
     max-width: 90%;
   }
+
+  .service-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 15px;
+  }
 }
 
 @media (max-width: 768px) {
+  
+  .service-list {
+    grid-template-columns: 1fr;
+  }
+
   .container {
     width: 150px;
     height: 150px;
@@ -1705,6 +1717,24 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 @media (max-width: 580px) {
+  .timeline-item:not(:last-child)::before {
+    display: none;
+  }
+  
+  .timeline-item::after {
+    display: none;
+  }
+
+  .timeline-list {
+    font-size: var(--fs-6);
+    margin-left: 0px;
+  }
+
+  .list-style {
+    padding-top: 5px;
+    margin-left: 15px;
+  }
+  
   .skills-wrap {
     margin-left: 0px;
   }
@@ -1723,6 +1753,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 @media (max-width: 450px) {
+
   .success-div {
     padding: 20px;
   }
@@ -1737,7 +1768,6 @@ textarea.form-input::-webkit-resizer { display: none; }
  */
 
 @media (min-width: 450px) {
-
   /**
    * client
    */
@@ -1786,7 +1816,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   .sidebar, article {
-    width: 520px;
+    width: 100%;
     margin-inline: auto;
     padding: 30px;
   }
@@ -2043,7 +2073,9 @@ textarea.form-input::-webkit-resizer { display: none; }
    * REUSED STYLE
    */
 
-  .sidebar, article { width: 700px; }
+  .sidebar, article {
+    width: 100%;
+  }
 
   .has-scrollbar::-webkit-scrollbar-button { width: 100px; }
 
@@ -2134,6 +2166,14 @@ textarea.form-input::-webkit-resizer { display: none; }
   .form-btn {
     width: max-content;
     margin-left: auto;
+  }
+  
+}
+
+
+@media (min-width: 912px) {
+  .sidebar, article {
+    width: 100%;
   }
   
 }
