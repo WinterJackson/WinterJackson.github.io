@@ -138,7 +138,7 @@ html { font-family: var(--ff-poppins); }
 body { 
   background-attachment: fixed;
   background-size: cover;
-  background-image: linear-gradient(#ff000028, rgba(0, 0, 0, 0.95)), url('../images/quizz.jpeg');
+  background-image: linear-gradient(#ff000028, rgba(0, 0, 0, 0.95)), url('../images/bg0.jpg');
   background-position: center right;
   background-repeat: no-repeat;
   opacity: 0.9; 
@@ -203,9 +203,9 @@ section {
 
 .sidebar,
 article {
-  background: var(--eerie-black-2);
+  background: rgba(169, 169, 169, 0.452);
   border: 1px solid var(--jet);
-  border-radius: 10px;
+  border-radius: 25px 50px / 50px;
   padding: 15px;
   box-shadow: var(--shadow-1);
   z-index: 1;
@@ -1651,10 +1651,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 .success-div {
-  background: var(--eerie-black-2);
-  min-height: 100vh;
+  background: rgba(169, 169, 169, 0.452);
   border: 1px solid var(--jet);
-  border-radius: 20px;
+  border-radius: 25px 50px / 50px;
+  min-height: 100vh;
   padding: 50px;
   box-shadow: var(--shadow-1);
   color: var(--white-2);
