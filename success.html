@@ -5,21 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Success</title>
+    <title>Winter Jackson</title>
 
     <!--
     - favicon
-  -->
-    <link rel="shortcut icon" href="./assets/images/my-avatar.png" type="image/x-icon">
+    -->
+    <link rel="shortcut icon" type="image/webp" href="./assets/images/my-avatar.webp">
+    <link rel="shortcut icon" type="image/png" href="./assets/images/my-avatar.png">
 
     <!--
     - custom css link
-  -->
+    -->
     <link rel="stylesheet" href="./assets/css/style.css">
 
     <!--
     - google font link
-  -->
+    -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -27,46 +28,245 @@
 
 <body>
 
-    <div class="success-container">
-        <div class="success-div">
+    <!--
+    - #MAIN
+    -->
 
-            <header>
-                <h2 class="h2 article-title">Contact</h2>
-            </header>
+    <main>
+        <div class="wrap">
+            <!--
+            - #SIDEBAR
+                -->
 
-            <section class="success-msg">
-                <span>Message sent successfully!</span>
-                <br>
-                <br>
-                <br>
-                <br>
-                <p>
-                    <strong>Thank You for contacting me!</strong>
-                </p>
-                <span>I will reply to you shortly. Keep calm.</span>
+            <aside class="sidebar slide-in-right" data-sidebar>
 
-            </section>
-            <button class="back-btn" onclick="goBack()">Go Back!</button>
+                <div class="sidebar-info">
 
+                <div class="container">
+                    <div class="box">
+                        <div class="spin-container">
+                            <div class="shape">
+                                <div class="avatar-box">
+                                    <!-- <picture>
+                                        <source srcset="./assets/images/my-avatar.webp" type="image/webp">
+                                        <img src="./assets/images/my-avatar.png" alt="Winter Jackson" width="80">
+                                    </picture> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="info-content">
+                        <h1 class="name" title="Winter Jackson">Winter Jackson</h1>
+
+                        <p class="title">Software Engineer.</p>
+                    </div>
+
+                    <button class="info_more-btn" data-sidebar-btn>
+                        <span>Show Contacts</span>
+
+                        <ion-icon name="chevron-down"></ion-icon>
+                    </button>
+
+                </div>
+
+                <div class="sidebar-info_more">
+
+                    <div class="separator"></div>
+
+                    <ul class="contacts-list">
+
+                        <li class="contact-item">
+
+                            <div class="icon-box">
+                                <ion-icon name="mail-outline"></ion-icon>
+                            </div>
+
+                            <div class="contact-info">
+                                <p class="contact-title">E-mail</p>
+
+                                <a href="mailto:winterjacksonwj@gmail.com"
+                                    class="contact-link">winterjacksonwj@gmail.com</a>
+                            </div>
+
+                        </li>
+
+                        <li class="contact-item">
+
+                            <div class="icon-box">
+                                <ion-icon name="phone-portrait-outline"></ion-icon>
+                            </div>
+
+                            <div class="contact-info">
+                                <p class="contact-title">Phone</p>
+
+                                <a href="tel:+254 795-213-399" class="contact-link">+254 (795) 213-399</a>
+                            </div>
+
+                        </li>
+
+                        <li class="contact-item">
+
+                            <div class="icon-box">
+                                <ion-icon name="call-outline"></ion-icon>
+                            </div>
+
+                            <div class="contact-info">
+                                <p class="contact-title">Alt. Phone</p>
+
+                                <a href="tel:+254 795-213-399" class="contact-link">+254 (772) 393-864</a>
+                            </div>
+
+                        </li>
+
+                        <li class="contact-item">
+
+                            <div class="icon-box">
+                                <ion-icon name="location-outline"></ion-icon>
+                            </div>
+
+                            <div class="contact-info">
+                                <p class="contact-title">Location</p>
+
+                                <address>Nairobi, Kenya.</address>
+                            </div>
+
+                        </li>
+
+                    </ul>
+
+                    <div class="separator"></div>
+
+                    <ul class="social-list">
+
+                        <li class="social-item">
+                            <a href="https://github.com/WinterJackson" class="social-link" target="_blank">
+                                <ion-icon name="logo-github"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li class="social-item">
+                            <a href="https://www.linkedin.com/in/winter-jackson-454843178/" class="social-link"
+                                target="_blank">
+                                <ion-icon name="logo-linkedin"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li class="social-item">
+                            <a href="https://wa.me/+254795213399" class="social-link" target="_blank">
+                                <ion-icon name="logo-whatsapp"></ion-icon>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </aside>
+
+            <div class="separator2"></div>
+            <!--
+            - #main-content
+                -->
+            <div class="main-content fade-in ">
+                <div class="success-container">
+                    <div class="success-div">
+            
+                        <header>
+                            <h2 class="h2 article-title">Contact</h2>
+                        </header>
+            
+                        <section class="success-msg">
+                            <span>Message sent successfully!</span>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <p>
+                                <strong>Thank You for contacting me!</strong>
+                            </p>
+                            <span>I will reply to you shortly. Keep calm.</span>
+            
+                        </section>
+                        <button class="back-btn" onclick="goBack()">Go Back!</button>
+            
+                    </div>
+                </div>
+            </div>
+
+            
         </div>
-    </div>
-
-    <div class="copyright"> 
+    </main>
+    <div class="copyright">
         <div class="cc-text">
             <p>All Rights Reserved. &copy; <em id="currentYear">2020</em> | W.J</p>
         </div>
     </div>
 
+    <!--
+    - custom js 
+    -->
+
+
+    <script src="./assets/js/script.js"></script>
     <script>
         const spanYear = document.querySelector('#currentYear');
         const currentYear = new Date();
         spanYear.innerText = currentYear.getFullYear();
     </script>
-    
+
+    <script defer>
+        const observer1 = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry)
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show')
+                } else {
+                    entry.target.classList.remove('show')
+                }
+            });
+        })
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach((element) => observer1.observe(element));
+    </script>
+    <!--
+    - ionicon link
+    -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script>
-        function goBack() {
-            window.location.href = "https://winterjackson.github.io/";
+        // Typing effect function
+        function typingEffect(element, text, speed) {
+            let i = 0;
+            const typingInterval = setInterval(() => {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                } else {
+                    clearInterval(typingInterval);
+                }
+            }, speed);
         }
+
+        // Intersection Observer callback function
+        function startTyping(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const paragraph = entry.target.querySelector('.show-list');
+                    const text = paragraph.textContent;
+                    paragraph.style.display = 'inline-block'; 
+                    paragraph.textContent = ''; 
+                    typingEffect(paragraph, text, 50); 
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }
+
+        // Intersection Observer
+        const observer = new IntersectionObserver(startTyping, { threshold: 0.7 });
+        const skillsShowDiv = document.querySelector('.skills-show');
+        observer.observe(skillsShowDiv);
     </script>
 
 </body>

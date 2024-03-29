@@ -206,7 +206,7 @@ section {
 article {
   background: rgba(169, 169, 169, 0.137);
   border: 1px solid var(--jet);
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 15px;
   box-shadow: var(--shadow-1);
   z-index: 1;
@@ -1681,21 +1681,18 @@ textarea.form-input::-webkit-resizer { display: none; }
   /* #SUCCESS PAGE */
 
 .success-container {
-  padding-top: 80px;
   color: var(--white-2);
 }
 
 .success-div {
-  background: rgba(169, 169, 169, 0.452);
+  background: rgba(169, 169, 169, 0.137);
   border: 1px solid var(--jet);
   border-radius: 25px 50px / 50px;
-  min-height: 100vh;
+  min-height: 50vh;
   padding: 50px;
   box-shadow: var(--shadow-1);
   color: var(--white-2);
-  max-width: 70%;
   margin: 0 auto;
-  margin-bottom: 40px;
 }
 
 .success-msg {
