@@ -1542,12 +1542,17 @@ article.active {
 }
 
 .project-description {
-  background-color: red;
   padding: 20px;
   display: none;
   color: white;
   margin-top: 10px;
   transition: opacity 0.3s ease; 
+}
+
+.project-description p {
+  text-align: justify;
+  font-size: 12.3px;
+  word-spacing: 0.01px; 
 }
 
 .project-wrap:hover .project-description {
