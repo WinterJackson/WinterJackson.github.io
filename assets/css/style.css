@@ -1608,8 +1608,7 @@ article.active {
 }
 
 .project-description p {
-  text-align: justify;
-  font-size: 12.3px;
+  font-size: 15px;
   word-spacing: 0.01px; 
 }
 
@@ -2345,9 +2344,9 @@ textarea.form-input::-webkit-resizer { display: none; }
     color: #FF0000;
   }
 
-  /* portfolio and blog grid */
+  /* portfolio */
 
-  .project-list, .blog-posts-list { grid-template-columns: 1fr 1fr; }
+  .project-list { grid-template-columns: 1fr 1fr; }
 
 
   /**
@@ -2486,7 +2485,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    * PORTFOLIO
    */
 
-  .project-list { grid-template-columns: repeat(3, 1fr); }
+  .project-list { grid-template-columns: repeat(2, 1fr); }
 
 }
 /**
