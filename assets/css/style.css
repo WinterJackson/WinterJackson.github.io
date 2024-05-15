@@ -151,7 +151,6 @@ section {
 
 .hidden {
   opacity: 0;
-  filter: blur(3px);
   transition: all 700ms;
 }
 
@@ -685,6 +684,7 @@ article.active {
 }
 
 .service-item {
+  margin: 20px;
   position: relative;
   padding: 20px;
   border-radius: 10px;
@@ -985,6 +985,7 @@ article.active {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  margin-top: 20px;
 }
 
 .testimonial-name-wrap {
@@ -1034,6 +1035,28 @@ article.active {
   margin-top: 4px;
   color: #0077b5;
 }
+
+.t-text {
+  max-height: 45px;
+  max-width: fit-content;
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.t-text span {
+  color: white;
+  background-color: #0077b5;
+  padding: 5px;
+  font-size: smaller;
+  border-radius: 3px;
+}
+
+.t-text ion-icon {
+  color: white;
+  font-size: xx-large;
+}
+
 
 /**
  * #testimonials-modal
@@ -1523,6 +1546,41 @@ article.active {
 }
 
 .project-item > a:hover img { transform: scale(1.1); }
+
+.project-btns {
+  display: flex;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.github-btn {
+  color: red;
+  background-color: rgba(0, 0, 0, 0.336);
+  border-radius: 10px 0 0 10px;
+  font-size: small;
+  padding: 10px;
+}
+
+.github-btn:hover {
+  background-color: rgba(255, 0, 0, 0.8);
+  color: var(--light-gray);
+
+}
+
+.demo-btn {
+  color: red;
+  background-color: rgba(0, 0, 0, 0.336);
+  border-radius: 0 10px 10px 0;
+  font-size: small;
+  padding: 10px;
+  border-left: 0.1px solid var(--light-gray);
+}
+
+.demo-btn:hover {
+  background-color: rgba(255, 0, 0, 0.8);
+  color: var(--light-gray);
+
+}
 
 .project-title,
 .project-category { margin-left: 10px; }
