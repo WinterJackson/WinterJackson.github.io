@@ -2424,6 +2424,10 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin: auto;
   }
 
+  .success-page {
+    min-width: 90%;
+  }
+
   .wrap {
     display: flex;
     flex-direction: column;
