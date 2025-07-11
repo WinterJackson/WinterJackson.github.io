@@ -201,6 +201,45 @@ section {
 
   /* #REUSED STYLE */
 
+.profile-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.avatar-box {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.video-fallback {
+    display: none !important;
+}
+
+/* Show fallback if video fails to load */
+video.profile-video:not([src]) .video-fallback,
+video.profile-video[poster] .video-fallback {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-fallback img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
 .sidebar,
 article {
   background: rgba(169, 169, 169, 0.137);
@@ -407,7 +446,7 @@ article.active {
 
 .shape {
   border: 1px solid red;
-  background-color: rgba(0, 0, 0, 0.336);
+  background-color: red;
   width: 100%;
   height: 100%;
   transition: border-radius 1s ease-out;
@@ -424,7 +463,6 @@ article.active {
   position: absolute;
   left: -21%;
   top: -21%;
-  background-image: url('../images/my-avatar.png');
   background-position: center center;
   background-repeat: no-repeat !important;
   animation: spin 12s ease-in-out infinite alternate-reverse;
@@ -732,6 +770,28 @@ article.active {
  * #languages 
  */
 
+.languages-track,
+.others-track {
+  overflow: hidden;
+  position: relative;
+}
+
+.languages-items-wrap:hover,
+.others-items-wrap:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-x {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
 .lang-text {
   color: var(--light-gray);
   background: rgba(0, 0, 0, 0.336);
@@ -906,10 +966,10 @@ article.active {
 }
 
 .others-items-wrap {
-  height: 135px;
+  height: 200px;
   display: flex;
   gap: 10px;
-  animation: slideshow 35s linear infinite;
+  animation: slideshow 65s linear infinite;
 }
 
 .others-items-wrap img {
@@ -1404,8 +1464,33 @@ article.active {
 } 
 
 
-  /* #PORTFOLIO */
+/* #PORTFOLIO */
 
+/* 1. Hide every project by default */
+.project-item {
+  display: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform .2s ease;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.336);
+}
+
+/* 2. Show only those with .active */
+.project-item.active {
+  display: flex;
+  flex-direction: column;
+  animation: scaleUp 0.25s ease forwards;
+}
+
+@keyframes scaleUp {
+  0%   { transform: scale(0.5); }
+  100% { transform: scale(1);       }
+}
+
+/* Filter controls */
 .filter-list { display: none; }
 
 .filter-select-box {
@@ -1430,7 +1515,9 @@ article.active {
   font-weight: var(--fw-300);
 }
 
-.filter-select.active .select-icon { transform: rotate(0.5turn); }
+.filter-select.active .select-icon {
+  transform: rotate(0.5turn);
+}
 
 .select-list {
   background: var(--eerie-black-2);
@@ -1464,8 +1551,11 @@ article.active {
   border-radius: 8px;
 }
 
-.select-item button:hover { --eerie-black-2: hsl(240, 2%, 20%); }
+.select-item button:hover {
+  --eerie-black-2: hsl(240, 2%, 20%);
+}
 
+/* Project list layout */
 .project-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -1473,25 +1563,27 @@ article.active {
   margin-bottom: 10px;
 }
 
-.project-item { 
-  padding: 20px;
-  border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0.336);
-  display: none; 
+/* Hover scale */
+.project-item:hover {
+  transform: scale(1.02);
 }
 
-.project-item.active {
-  display: block;
-  animation: scaleUp 0.25s ease forwards;
+/* Underlay dim */
+.project-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  opacity: 0;
+  transition: opacity .3s ease;
+  pointer-events: none;
+}
+.project-item:hover::after,
+.project-item.open::after {
+  opacity: 1;
 }
 
-@keyframes scaleUp {
-  0% { transform: scale(0.5); }
-  100% { transform: scale(1); }
-}
-
-.project-item > a { width: 100%; }
-
+/* Image container */
 .project-img {
   position: relative;
   width: 100%;
@@ -1504,17 +1596,28 @@ article.active {
 .project-img::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: transparent;
   z-index: 1;
   transition: var(--transition-1);
 }
 
-.project-item > a:hover .project-img::before { background: hsla(0, 0%, 0%, 0.5); }
+.project-item > a:hover .project-img::before {
+  background: hsla(0, 0%, 0%, 0.5);
+}
 
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-1);
+}
+
+.project-item > a:hover img {
+  transform: scale(1.1);
+}
+
+/* Eye icon overlay */
 .project-item-icon-box {
   --scale: 0.8;
   background: var(--jet);
@@ -1530,60 +1633,84 @@ article.active {
   z-index: 1;
   transition: var(--transition-1);
 }
-
 .project-item > a:hover .project-item-icon-box {
   --scale: 1;
   opacity: 1;
 }
 
-.project-item-icon-box ion-icon { --ionicon-stroke-width: 50px; }
-
-.project-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: var(--transition-1);
+/* Card content wrapper */
+.card-content {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform .2s ease;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.336);
 }
 
-.project-item > a:hover img { transform: scale(1.1); }
+/* Overlay description */
+.card-content .project-description {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
 
+.card-content:hover .project-description,
+.card-content.open .project-description {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Show description on project-item hover/open */
+.project-item:hover .project-description,
+.project-item.open .project-description {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Buttons always on top */
 .project-btns {
   display: flex;
-  padding: 10px;
-  margin-top: 10px;
+  gap: 10px;
+  margin-top: 15px;
+  position: relative;
+  z-index: 5;
 }
 
-.github-btn {
+.github-btn,
+.demo-btn {
+  background-color: rgba(0,0,0,0.336);
   color: red;
-  background-color: rgba(0, 0, 0, 0.336);
-  border-radius: 10px 0 0 10px;
-  font-size: small;
   padding: 10px;
+  border-radius: 10px;
+  font-size: small;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.github-btn:hover {
-  background-color: rgba(255, 0, 0, 0.8);
-  color: var(--light-gray);
-
+.github-btn:hover,
+.demo-btn:hover {
+  background-color: rgba(255,0,0,0.8);
+  color: #fff;
 }
 
 .demo-btn {
-  color: red;
-  background-color: rgba(0, 0, 0, 0.336);
-  border-radius: 0 10px 10px 0;
-  font-size: small;
-  padding: 10px;
   border-left: 0.1px solid var(--light-gray);
 }
 
-.demo-btn:hover {
-  background-color: rgba(255, 0, 0, 0.8);
-  color: var(--light-gray);
-
-}
-
+/* Text styling */
 .project-title,
-.project-category { margin-left: 10px; }
+.project-category {
+  margin-left: 10px;
+}
 
 .project-title {
   color: var(--white-2);
@@ -1599,26 +1726,11 @@ article.active {
   font-weight: var(--fw-300);
 }
 
-.project-description {
-  padding: 20px;
-  display: none;
-  color: white;
-  margin-top: 10px;
-  transition: opacity 0.3s ease; 
-}
-
 .project-description p {
   font-size: 15px;
-  word-spacing: 0.01px; 
+  word-spacing: 0.01px;
 }
 
-.project-wrap:hover .project-description {
-  display: block;
-  opacity: 1; 
-  padding: 20px;
-  border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0.336);
-}
 
   /* #CONTACT */
 
@@ -1828,7 +1940,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     position: absolute;
     left: -21%;
     top: -21%;
-    background-image: url('../images/my-avatar.png');
     background-position: center center;
     animation: spin 12s ease-in-out infinite alternate-reverse;
     opacity: 1;
