@@ -27,6 +27,20 @@
 </head>
 
 <body>
+  <div id="splash-screen">
+    <div class="splash-spin-container">
+      <div class="splash-shape">
+        <div class="splash-avatar-box">
+          <video autoplay loop muted playsinline class="profile-video">
+            <source src="./assets/videos/profile-video.mp4" type="video/mp4">
+            <p class="video-fallback">
+              <img src="./assets/images/233.jpg" alt="Winter Jackson">
+            </p>
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <!--
     - #MAIN
@@ -1575,6 +1589,14 @@
     - custom js 
     -->
     <script src="./assets/js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(() => {
+                document.getElementById("splash-screen").style.display = "none";
+                document.getElementById("main-content").hidden = false;
+            }, 6000); // 6 seconds
+        });
+    </script>
 
     <!--
     - ionicon link

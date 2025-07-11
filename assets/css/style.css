@@ -201,6 +201,106 @@ section {
 
   /* #REUSED STYLE */
 
+#splash-screen {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: black;
+  z-index: 9999;
+}
+
+.splash-spin-container {
+  width: 30vw;
+  height: 30vw;
+  max-width: 100vh;
+  max-height: 100vh;
+  animation: spin 12s ease-in-out infinite alternate;
+  position: relative;
+}
+
+/* Tablet screens (≥ 768px) */
+@media (min-width: 768px) {
+  .splash-spin-container {
+    width: 20vw;
+    height: 20vw;
+  }
+}
+
+/* Large screens (≥ 1024px) */
+@media (min-width: 1024px) {
+  .splash-spin-container {
+    width: 10vw;
+    height: 10vw;
+  }
+}
+
+/* Extra large screens (≥ 1440px) */
+@media (min-width: 1440px) {
+  .splash-spin-container {
+    width: 5vw;
+    height: 5vw;
+  }
+}
+
+.splash-shape {
+  width: 100%;
+  height: 100%;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  background-color: red;
+  animation: morph 25s ease-in-out infinite both alternate;
+  overflow: hidden;
+  position: absolute;
+  z-index: 5;
+}
+
+.splash-avatar-box {
+  width: 142%;
+  height: 142%;
+  position: absolute;
+  top: -21%;
+  left: -21%;
+  scale: 0.7;
+  animation: spin 12s ease-in-out infinite alternate-reverse;
+  z-index: 2;
+}
+
+/* .profile-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+
+/* keyframes */
+@keyframes morph {
+  0% {
+    border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 60% 40% 40% 60% / 50% 30% 60% 50%;
+  }
+  100% {
+    border-radius: 40% 60%;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+
+/* Main content is normal layout */
+#main-content {
+  padding: 20px;
+}
+
+
 .profile-video {
     width: 100%;
     height: 100%;
