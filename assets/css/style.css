@@ -202,6 +202,7 @@ section {
   /* #REUSED STYLE */
 
 #splash-screen {
+  opacity: 1;
   position: fixed;
   top: 0; left: 0;
   width: 100vw;
@@ -212,6 +213,12 @@ section {
   overflow: hidden;
   background: black;
   z-index: 9999;
+}
+
+#splash-screen.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease;
+  pointer-events: none;
 }
 
 .splash-spin-container {
