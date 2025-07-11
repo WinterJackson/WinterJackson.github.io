@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
             setTimeout(() => {
                 splash.style.display = "none";
                 main.hidden = false;
-            }, 2000);
+            }, 3500);
         }, 6000);
     }
 
