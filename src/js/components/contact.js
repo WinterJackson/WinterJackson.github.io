@@ -5,9 +5,9 @@ export function initContact() {
 
   if (!form || !formBtn) return;
 
-  // Initialize EmailJS (You should replace 'YOUR_PUBLIC_KEY' with your actual key if you have one, 
-  // otherwise this serves as the implementation structure ready for the key)
-  // emailjs.init("YOUR_PUBLIC_KEY"); 
+  // Initialize EmailJS
+  // IMPORTANT: Replace with your actual Public Key
+  emailjs.init("LCOJCSJdZUnGzpjg0"); 
 
   for (let i = 0; i < formInputs.length; i++) {
     formInputs[i].addEventListener("input", function () {
@@ -27,15 +27,19 @@ export function initContact() {
     formBtn.innerText = 'Sending...';
     formBtn.setAttribute('disabled', 'true');
 
-    // MOCK SENDING for now
-    // In production: emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
-    
-    setTimeout(() => {
-        alert('Message sent successfully! (This is a mock, configured for EmailJS)');
-        form.reset();
-        formBtn.innerHTML = originalBtnText;
-        formBtn.removeAttribute('disabled');
-    }, 2000);
+    // Send email
+    // IMPORTANT: Replace with your Service ID and Template ID
+    emailjs.sendForm('service_74zb9ia', 'template_ujgl3bj', this)
+      .then(function() {
+          alert('Message sent successfully!');
+          form.reset();
+          formBtn.innerHTML = originalBtnText;
+          formBtn.removeAttribute('disabled');
+      }, function(error) {
+          alert('Failed to send message: ' + JSON.stringify(error));
+          formBtn.innerHTML = originalBtnText;
+          formBtn.removeAttribute('disabled');
+      });
   });
 }
 
