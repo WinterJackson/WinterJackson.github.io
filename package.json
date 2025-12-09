@@ -1,0 +1,17 @@
+{
+  "name": "winterjackson.github.io",
+  "version": "1.0.0",
+  "description": "Welcome to my personal portfolio repository! Here you'll find everything you need to know about me, my skills, projects, and how to get in touch.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^6.4.1"
+  }
+}

@@ -1,0 +1,215 @@
+/* #PORTFOLIO */
+
+.filter-list { display: none; }
+
+.filter-select-box {
+  position: relative;
+  margin-bottom: 25px;
+  background: rgba(0, 0, 0, 0.514);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.filter-select {
+  background: var(--eerie-black-2);
+  color: var(--light-gray);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--jet);
+  border-radius: 14px;
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+}
+
+.filter-select.active .select-icon { transform: rotate(0.5turn); }
+
+.select-list {
+  background: var(--eerie-black-2);
+  position: absolute;
+  top: calc(100% + 6px);
+  width: 100%;
+  padding: 6px;
+  border: 1px solid var(--jet);
+  border-radius: 10px;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: 0.15s ease-in-out;
+}
+
+.filter-select.active + .select-list {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.select-item button {
+  background: var(--eerie-black-2);
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  text-transform: capitalize;
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.select-item button:hover { --eerie-black-2: hsl(240, 2%, 20%); }
+
+.project-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-bottom: 10px;
+}
+
+.project-item { 
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.336);
+  display: none; 
+}
+
+.project-item.active {
+  display: block;
+  animation: scaleUp 0.25s ease forwards;
+}
+
+@keyframes scaleUp {
+  0% { transform: scale(0.5); }
+  100% { transform: scale(1); }
+}
+
+.project-item > a { width: 100%; }
+
+.project-img {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.project-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 1;
+  transition: var(--transition-1);
+}
+
+.project-item > a:hover .project-img::before { background: hsla(0, 0%, 0%, 0.5); }
+
+.project-item-icon-box {
+  --scale: 0.8;
+  background: var(--jet);
+  color: #FF0000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(var(--scale));
+  font-size: 20px;
+  padding: 18px;
+  border-radius: 10px;
+  opacity: 0;
+  z-index: 1;
+  transition: var(--transition-1);
+}
+
+.project-item > a:hover .project-item-icon-box {
+  --scale: 1;
+  opacity: 1;
+}
+
+.project-item-icon-box ion-icon { --ionicon-stroke-width: 50px; }
+
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-1);
+}
+
+.project-item > a:hover img { transform: scale(1.1); }
+
+.project-btns {
+  display: flex;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.github-btn {
+  color: red;
+  background-color: rgba(0, 0, 0, 0.336);
+  border-radius: 10px 0 0 10px;
+  font-size: small;
+  padding: 10px;
+}
+
+.github-btn:hover {
+  background-color: rgba(255, 0, 0, 0.8);
+  color: var(--light-gray);
+
+}
+
+.demo-btn {
+  color: red;
+  background-color: rgba(0, 0, 0, 0.336);
+  border-radius: 0 10px 10px 0;
+  font-size: small;
+  padding: 10px;
+  border-left: 0.1px solid var(--light-gray);
+}
+
+.demo-btn:hover {
+  background-color: rgba(255, 0, 0, 0.8);
+  color: var(--light-gray);
+
+}
+
+.project-title,
+.project-category { margin-left: 10px; }
+
+.project-title {
+  color: var(--white-2);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-400);
+  text-transform: capitalize;
+  line-height: 1.3;
+}
+
+.project-category {
+  color: var(--light-gray-70);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+}
+
+.project-description {
+  padding: 20px;
+  display: none;
+  color: white;
+  margin-top: 10px;
+  transition: opacity 0.3s ease; 
+}
+
+.project-description p {
+  font-size: 15px;
+  word-spacing: 0.01px; 
+}
+
+.project-wrap:hover .project-description {
+  display: block;
+  opacity: 1; 
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.336);
+}

@@ -1,0 +1,55 @@
+
+.clients {
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.slider {
+  width: 100%;
+  height: auto;
+  position: relative;
+  box-shadow: 0 10px 20px -10px rgba(0,0,0,0.2);
+  display: flex;
+  gap: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: 1rem;
+  -webkit-mask: linear-gadient (
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent)
+}
+
+.client-items-wrap {
+  height: 200px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  animation: slideshow 40s linear infinite;
+}
+
+/* Pause the animation when hovering over the slider */
+.slider:hover .client-items-wrap {
+  animation-play-state: paused;
+}
+
+@keyframes slideshow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); 
+  }
+}
+
+.client-items-wrap img {
+  width: 300px;
+  height: auto;
+  padding: 0 10px 0 10px;
+  background: rgba(0, 0, 0, 0.336);
+  transition: var(--transition-1);
+}

@@ -16,7 +16,7 @@
     <!--
     - custom css link
     -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 
     <!--
     - google font link
@@ -24,9 +24,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 
 <body>
+    <!-- 
+    - #LOADING OVERLAY 
+    -->
+    <div id="loading-overlay">
+        <div class="overlay-content">
+            <div class="overlay-box">
+                <div class="overlay-spin-container">
+                    <div class="overlay-shape">
+                        <div class="overlay-avatar-box">
+                            <video src="/assets/videos/profile-video.mp4" autoplay loop muted playsinline
+                                class="avatar-video"></video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!--
     - #MAIN
@@ -42,20 +65,18 @@
 
                 <div class="sidebar-info">
 
-                <div class="container">
-                    <div class="box">
-                        <div class="spin-container">
-                            <div class="shape">
-                                <div class="avatar-box">
-                                    <!-- <picture>
-                                        <source srcset="./assets/images/my-avatar.webp" type="image/webp">
-                                        <img src="./assets/images/my-avatar.png" alt="Winter Jackson" width="80">
-                                    </picture> -->
+                    <div class="container">
+                        <div class="box">
+                            <div class="spin-container">
+                                <div class="shape">
+                                    <div class="avatar-box">
+                                        <video src="/assets/videos/profile-video.mp4" autoplay loop muted playsinline
+                                            class="avatar-video"></video>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
                     <div class="info-content">
                         <h1 class="name" title="Winter Jackson">Winter Jackson.</h1>
@@ -85,8 +106,9 @@
 
                             <div class="contact-info">
                                 <p class="contact-title">E-mail</p>
-                            
-                                <a href="mailto:winterjacksonwj@gmail.com" class="contact-link">winterjacksonwj@gmail.com</a>
+
+                                <a href="mailto:winterjacksonwj@gmail.com"
+                                    class="contact-link">winterjacksonwj@gmail.com</a>
                             </div>
 
                         </li>
@@ -252,7 +274,8 @@
                                     <h4 class="h4 service-item-title">Frontend Development</h4>
 
                                     <p class="service-item-text">
-                                        Well thought out User Interfaces for web applications to enhance the User Experience
+                                        Well thought out User Interfaces for web applications to enhance the User
+                                        Experience
                                         effectively.
                                     </p>
                                 </div>
@@ -264,7 +287,8 @@
                                 <div class="service-icon-box">
                                     <picture>
                                         <source srcset="./assets/images/back-dev.webp" type="image/webp">
-                                        <img src="./assets/images/back-dev.png" alt="Backend development icon" width="40">
+                                        <img src="./assets/images/back-dev.png" alt="Backend development icon"
+                                            width="40">
                                     </picture>
                                 </div>
 
@@ -392,10 +416,12 @@
                         </p>
 
                         <p>
-                            I am committed to developing a website or application that seamlessly blends functionality with
+                            I am committed to developing a website or application that seamlessly blends functionality
+                            with
                             aesthetic appeal. With a focus on user experience, I strive to infuse each project with a
                             personal touch, ensuring it is visually captivating and easily navigable. Thus effectively
-                            engaging the users while positively upholding the brand identity through a creative design and a
+                            engaging the users while positively upholding the brand identity through a creative design
+                            and a
                             user-friendly interface.
                         </p>
                     </section>
@@ -423,7 +449,8 @@
                                     <h4 class="h4 service-item-title">Frontend Development</h4>
 
                                     <p class="service-item-text">
-                                        Well thought out User Interfaces for web applications to enhance the User Experience
+                                        Well thought out User Interfaces for web applications to enhance the User
+                                        Experience
                                         effectively.
                                     </p>
                                 </div>
@@ -435,7 +462,8 @@
                                 <div class="service-icon-box">
                                     <picture>
                                         <source srcset="./assets/images/back-dev.webp" type="image/webp">
-                                        <img src="./assets/images/back-dev.png" alt="Backend development icon" width="40">
+                                        <img src="./assets/images/back-dev.png" alt="Backend development icon"
+                                            width="40">
                                     </picture>
                                 </div>
 
@@ -503,197 +531,197 @@
                             <p>Below are some of the Languages and web development tools am well conversant with.</p>
                         </div>
                         <div class="slider-wrap">
-                                <div class="slider-lang">
-                                    <div class="slider-title1">
-                                        <p>Languages</p>
+                            <div class="slider-lang">
+                                <div class="slider-title1">
+                                    <p>Languages</p>
+                                </div>
+                                <div class="languages-items-wrap">
+                                    <div>
+                                        <img src="./assets/images/CSS3.png" alt="CSS3 logo">
+                                        <p>CSS3</p>
                                     </div>
-                                    <div class="languages-items-wrap">
-                                        <div>
-                                            <img src="./assets/images/CSS3.png" alt="CSS3 logo">
-                                            <p>CSS3</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/HTML5.png" alt="HTML5 logo">
-                                            <p>HTML5</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/javascript.svg" alt="JavaScript logo">
-                                            <p>JavaScript</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/react.svg" alt="React logo">
-                                            <p>React</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/Tailwind.png" alt="Tailwind CSS logo">
-                                            <p>Tailwind CSS</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/nextjs-dark.svg" alt="Next.js logo">
-                                            <p>Next.js</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/nodejs.svg" alt="Node.js logo">
-                                            <p>Node.js</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/python.svg" alt="Python logo">
-                                            <p>Python</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/flask.svg" alt="Flask logo">
-                                            <p>Flask</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/mysql.svg" alt="MySQL logo">
-                                            <p>MySQL</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/sqlite.png" alt="SQLite logo">
-                                            <p>SQLite</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/sqlalchemy.png" alt="SQLAlchemy logo">
-                                            <p>SQLAlchemy</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/Ruby.png" alt="Ruby logo">
-                                            <p>Ruby</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/MongoDB.svg" alt="MongoDB logo">
-                                            <p>MongoDB</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/Jest.svg" alt="Jest logo">
-                                            <p>Jest</p>
-                                        </div>
+                                    <div>
+                                        <img src="./assets/images/HTML5.png" alt="HTML5 logo">
+                                        <p>HTML5</p>
                                     </div>
-                                    
-                                    <div class="languages-items-wrap">
-                                        <div>
-                                            <img src="./assets/images/CSS3.png" alt="CSS3 logo">
-                                            <p>CSS3</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/HTML5.png" alt="HTML5 logo">
-                                            <p>HTML5</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/javascript.svg" alt="JavaScript logo">
-                                            <p>JavaScript</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/react.svg" alt="React logo">
-                                            <p>React</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/Tailwind.png" alt="Tailwind CSS logo">
-                                            <p>Tailwind CSS</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/nextjs-dark.svg" alt="Next.js logo">
-                                            <p>Next.js</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/nodejs.svg" alt="Node.js logo">
-                                            <p>Node.js</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/python.svg" alt="Python logo">
-                                            <p>Python</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/flask.svg" alt="Flask logo">
-                                            <p>Flask</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/mysql.svg" alt="MySQL logo">
-                                            <p>MySQL</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/sqlite.png" alt="SQLite logo">
-                                            <p>SQLite</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/sqlalchemy.png" alt="SQLAlchemy logo">
-                                            <p>SQLAlchemy</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/Ruby.png" alt="Ruby logo">
-                                            <p>Ruby</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/MongoDB.svg" alt="MongoDB logo">
-                                            <p>MongoDB</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/Jest.svg" alt="Jest logo">
-                                            <p>Jest</p>
-                                        </div>
+                                    <div>
+                                        <img src="./assets/images/javascript.svg" alt="JavaScript logo">
+                                        <p>JavaScript</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/react.svg" alt="React logo">
+                                        <p>React</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/Tailwind.png" alt="Tailwind CSS logo">
+                                        <p>Tailwind CSS</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/nextjs-dark.svg" alt="Next.js logo">
+                                        <p>Next.js</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/nodejs.svg" alt="Node.js logo">
+                                        <p>Node.js</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/python.svg" alt="Python logo">
+                                        <p>Python</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/flask.svg" alt="Flask logo">
+                                        <p>Flask</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/mysql.svg" alt="MySQL logo">
+                                        <p>MySQL</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/sqlite.png" alt="SQLite logo">
+                                        <p>SQLite</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/sqlalchemy.png" alt="SQLAlchemy logo">
+                                        <p>SQLAlchemy</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/Ruby.png" alt="Ruby logo">
+                                        <p>Ruby</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/MongoDB.svg" alt="MongoDB logo">
+                                        <p>MongoDB</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/Jest.svg" alt="Jest logo">
+                                        <p>Jest</p>
                                     </div>
                                 </div>
 
-                                <div class="slider-others">
-                                    <div class="slider-title2">
-                                        <p>Other tools</p>
+                                <div class="languages-items-wrap">
+                                    <div>
+                                        <img src="./assets/images/CSS3.png" alt="CSS3 logo">
+                                        <p>CSS3</p>
                                     </div>
-                                    <div class="others-items-wrap">
-                                        <div>
-                                            <img src="./assets/images/Linux.png" alt="Linux logo">
-                                            <p>Linux</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/Postman.svg" alt="Postman logo">
-                                            <p>Postman</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/postgresql.svg" alt="PostgreSQL logo">
-                                            <p>PostgreSQL</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/Heroku.png" alt="Heroku logo">
-                                            <p>Heroku</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/Git.png" alt="Git logo">
-                                            <p>Git</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/Figma.png" alt="Figma logo">
-                                            <p>Figma</p>
-                                        </div>
+                                    <div>
+                                        <img src="./assets/images/HTML5.png" alt="HTML5 logo">
+                                        <p>HTML5</p>
                                     </div>
-                                
-                                    <div class="others-items-wrap">
-                                        <div>
-                                            <img src="./assets/images/Linux.png" alt="Linux logo">
-                                            <p>Linux</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/Postman.svg" alt="Postman logo">
-                                            <p>Postman</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/postgresql.svg" alt="PostgreSQL logo">
-                                            <p>PostgreSQL</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/Heroku.png" alt="Heroku logo">
-                                            <p>Heroku</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/Git.png" alt="Git logo">
-                                            <p>Git</p>
-                                        </div>
-                                        <div>
-                                            <img src="./assets/images/Figma.png" alt="Figma logo">
-                                            <p>Figma</p>
-                                        </div>
+                                    <div>
+                                        <img src="./assets/images/javascript.svg" alt="JavaScript logo">
+                                        <p>JavaScript</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/react.svg" alt="React logo">
+                                        <p>React</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/Tailwind.png" alt="Tailwind CSS logo">
+                                        <p>Tailwind CSS</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/nextjs-dark.svg" alt="Next.js logo">
+                                        <p>Next.js</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/nodejs.svg" alt="Node.js logo">
+                                        <p>Node.js</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/python.svg" alt="Python logo">
+                                        <p>Python</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/flask.svg" alt="Flask logo">
+                                        <p>Flask</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/mysql.svg" alt="MySQL logo">
+                                        <p>MySQL</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/sqlite.png" alt="SQLite logo">
+                                        <p>SQLite</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/sqlalchemy.png" alt="SQLAlchemy logo">
+                                        <p>SQLAlchemy</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/Ruby.png" alt="Ruby logo">
+                                        <p>Ruby</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/MongoDB.svg" alt="MongoDB logo">
+                                        <p>MongoDB</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/Jest.svg" alt="Jest logo">
+                                        <p>Jest</p>
                                     </div>
                                 </div>
+                            </div>
+
+                            <div class="slider-others">
+                                <div class="slider-title2">
+                                    <p>Other tools</p>
+                                </div>
+                                <div class="others-items-wrap">
+                                    <div>
+                                        <img src="./assets/images/Linux.png" alt="Linux logo">
+                                        <p>Linux</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/Postman.svg" alt="Postman logo">
+                                        <p>Postman</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/postgresql.svg" alt="PostgreSQL logo">
+                                        <p>PostgreSQL</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/Heroku.png" alt="Heroku logo">
+                                        <p>Heroku</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/Git.png" alt="Git logo">
+                                        <p>Git</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/Figma.png" alt="Figma logo">
+                                        <p>Figma</p>
+                                    </div>
+                                </div>
+
+                                <div class="others-items-wrap">
+                                    <div>
+                                        <img src="./assets/images/Linux.png" alt="Linux logo">
+                                        <p>Linux</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/Postman.svg" alt="Postman logo">
+                                        <p>Postman</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/postgresql.svg" alt="PostgreSQL logo">
+                                        <p>PostgreSQL</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/Heroku.png" alt="Heroku logo">
+                                        <p>Heroku</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/Git.png" alt="Git logo">
+                                        <p>Git</p>
+                                    </div>
+                                    <div>
+                                        <img src="./assets/images/Figma.png" alt="Figma logo">
+                                        <p>Figma</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-        
+
                     </section>
 
                     <!--
@@ -711,7 +739,8 @@
                                 <div class="service-icon-box">
                                     <picture>
                                         <source srcset="./assets/images/artificial-intelligence.webp" type="image/webp">
-                                        <img src="./assets/images/artificial-intelligence.png" alt="design icon" width="40">
+                                        <img src="./assets/images/artificial-intelligence.png" alt="design icon"
+                                            width="40">
                                     </picture>
                                 </div>
 
@@ -719,7 +748,8 @@
                                     <h4 class="h4 service-item-title">Artificial Intelligence</h4>
 
                                     <p class="service-item-text">
-                                        Together with Machine Learning, Artificial Intelligence has imensely impacted the
+                                        Together with Machine Learning, Artificial Intelligence has imensely impacted
+                                        the
                                         tech world.
                                     </p>
                                 </div>
@@ -739,7 +769,8 @@
                                     <h4 class="h4 service-item-title">Cyber Security</h4>
 
                                     <p class="service-item-text">
-                                        As data greatly becomes the gold mine for people in the tech world, cyber security has now been
+                                        As data greatly becomes the gold mine for people in the tech world, cyber
+                                        security has now been
                                         more on demand than ever.
                                     </p>
                                 </div>
@@ -775,19 +806,21 @@
                                         <h4 class="h4 testimonials-item-title" data-testimonials-title>Jeremy Omare
                                             <span>Renewable Energy Professional.</span>
                                         </h4>
-                                        
+
                                     </div>
 
                                     <div class="testimonials-text" data-testimonials-text>
 
-                                        <a class="t-text" href="https://www.linkedin.com/in/jeremyomare/" target="_blank">
+                                        <a class="t-text" href="https://www.linkedin.com/in/jeremyomare/"
+                                            target="_blank">
                                             <span>LinkedIn</span>
                                             <ion-icon name="logo-linkedin"></ion-icon>
                                         </a>
                                         <p>
                                             "Exceptional service! Jackson provided unparalleled expertise and support
                                             throughout the entire development process. The attention to detail and
-                                            commitment to delivering high-quality results exceeded my expectations. I highly
+                                            commitment to delivering high-quality results exceeded my expectations. I
+                                            highly
                                             recommend the services to anyone looking for top-notch tech solutions."
                                         </p>
                                     </div>
@@ -813,13 +846,16 @@
                                     </div>
 
                                     <div class="testimonials-text" data-testimonials-text>
-                                        <a class="t-text" href="https://www.linkedin.com/in/nelson-lawrence-91bb2671/" target="_blank">
+                                        <a class="t-text" href="https://www.linkedin.com/in/nelson-lawrence-91bb2671/"
+                                            target="_blank">
                                             <span>LinkedIn</span>
                                             <ion-icon name="logo-linkedin"></ion-icon>
                                         </a>
                                         <p>
-                                            "Working with Winter Jackson, on my project has been a positive experience so
-                                            far. The collaborative nature and innovative solutions have made the development
+                                            "Working with Winter Jackson, on my project has been a positive experience
+                                            so
+                                            far. The collaborative nature and innovative solutions have made the
+                                            development
                                             process smooth and efficient. Looking forward to the project's completion!"
                                         </p>
                                     </div>
@@ -850,7 +886,8 @@
                                             <ion-icon name="logo-linkedin"></ion-icon>
                                         </a>
                                         <p>
-                                            "Absolutely reliable and highly efficient! Not only was our project completed
+                                            "Absolutely reliable and highly efficient! Not only was our project
+                                            completed
                                             well ahead of schedule, but the quality of work delivered surpassed the
                                             expectations. Exceptional service from start to finish!"
                                         </p>
@@ -894,9 +931,12 @@
 
                                 <div data-modal-text>
                                     <p>
-                                        "Exceptional service! Jackson provided unparalleled expertise and support throughout
-                                        the entire development process. The attention to detail and commitment to delivering
-                                        high-quality results exceeded my expectations. I highly recommend the services to
+                                        "Exceptional service! Jackson provided unparalleled expertise and support
+                                        throughout
+                                        the entire development process. The attention to detail and commitment to
+                                        delivering
+                                        high-quality results exceeded my expectations. I highly recommend the services
+                                        to
                                         anyone looking for top-notch tech solutions."
                                     </p>
                                 </div>
@@ -945,7 +985,8 @@
 
                             <li class="hidden show timeline-item">
 
-                                <h4 class="h4 hidden show timeline-item-title">European Business University, Luxembourg</h4>
+                                <h4 class="h4 hidden show timeline-item-title">European Business University, Luxembourg
+                                </h4>
 
                                 <span>Management Information Systems | September, 2022 - March, 2023.</span>
 
@@ -955,7 +996,8 @@
 
                                 <h4 class="h4 hidden show timeline-item-title">Kenyatta University, Nairobi</h4>
 
-                                <span>BSc. Commerce, Procurement & Supply Chain Management | September, 2016 - July, 2022.</span>
+                                <span>BSc. Commerce, Procurement & Supply Chain Management | September, 2016 - July,
+                                    2022.</span>
 
                             </li>
 
@@ -988,17 +1030,22 @@
                                     Key Responsibilities:
                                     <br>
                                 <ul>
-                                    <li class="list-style">Updating the Android App: Adapting the app to the latest Next.js
+                                    <li class="list-style">Updating the Android App: Adapting the app to the latest
+                                        Next.js
                                         framework and deploying the dashboard.</li>
-                                    <li class="list-style">Hospital Search: Adding the hospital search feature and booking
+                                    <li class="list-style">Hospital Search: Adding the hospital search feature and
+                                        booking
                                         functionality.</li>
-                                    <li class="list-style">EMR Integration: Connecting the app with the EMR dashboard for
+                                    <li class="list-style">EMR Integration: Connecting the app with the EMR dashboard
+                                        for
                                         seamless communication.</li>
                                     <li class="list-style">KPIs and Analytics: Tracking and analyzing key performance
                                         indicators.</li>
-                                    <li class="list-style">Dashboard Implementation: Developing a dashboard for hospitals to
+                                    <li class="list-style">Dashboard Implementation: Developing a dashboard for
+                                        hospitals to
                                         manage patients.</li>
-                                    <li class="list-style">Writing clean, maintainable code in accordance with well-known
+                                    <li class="list-style">Writing clean, maintainable code in accordance with
+                                        well-known
                                         coding standards and best practices.</li>
                                 </ul>
                                 </p>
@@ -1020,21 +1067,28 @@
                                     Key Responsibilities:
                                     <br>
                                 <ul>
-                                    <li class="list-style">Participating in the design, development, and testing of a sales
+                                    <li class="list-style">Participating in the design, development, and testing of a
+                                        sales
                                         and production automation application.</li>
-                                    <li class="list-style">Collaborating with other software engineers to execute project
+                                    <li class="list-style">Collaborating with other software engineers to execute
+                                        project
                                         requirements and translate them into technical specifications.</li>
-                                    <li class="list-style">Implementing new features and functionalities to the automated
+                                    <li class="list-style">Implementing new features and functionalities to the
+                                        automated
                                         application as outlined in the project roadmap.</li>
-                                    <li class="list-style">Troubleshooting and debugging issues to ensure smooth operation
+                                    <li class="list-style">Troubleshooting and debugging issues to ensure smooth
+                                        operation
                                         of the application.</li>
                                     <li class="list-style">Working closely with cross-functional teams, such as sales,
-                                        production, and quality assurance, to gather requirements, and insights and address
+                                        production, and quality assurance, to gather requirements, and insights and
+                                        address
                                         concerns.</li>
                                     <li class="list-style">Providing technical support to end-users as needed.</li>
-                                    <li class="list-style">Writing clean, maintainable code in accordance with well-known
+                                    <li class="list-style">Writing clean, maintainable code in accordance with
+                                        well-known
                                         coding standards and best practices.</li>
-                                    <li class="list-style">Keeping abreast of industry trends and advancements in software
+                                    <li class="list-style">Keeping abreast of industry trends and advancements in
+                                        software
                                         development methodologies.</li>
                                 </ul>
                                 </p>
@@ -1077,17 +1131,22 @@
                                     <br>
                                 <ul>
                                     <li class="list-style">Analyzing financial data, such as income statements, balance
-                                        sheets, and cash flow statements, to evaluate the applicant's financial health.</li>
+                                        sheets, and cash flow statements, to evaluate the applicant's financial health.
+                                    </li>
                                     <li class="list-style">Assessing the creditworthiness of individuals or businesses
                                         applying for loans or credit lines.</li>
-                                    <li class="list-style">Reviewing credit history, payment records, and credit scores to
+                                    <li class="list-style">Reviewing credit history, payment records, and credit scores
+                                        to
                                         determine the applicant's repayment capacity and risk profile.</li>
-                                    <li class="list-style">Communicating with applicants to gather additional information
+                                    <li class="list-style">Communicating with applicants to gather additional
+                                        information
                                         and clarify financial details as needed.</li>
-                                    <li class="list-style">Collaborating with underwriters, loan officers, and other team
+                                    <li class="list-style">Collaborating with underwriters, loan officers, and other
+                                        team
                                         members to ensure thorough evaluation and decision-making processes.</li>
                                     <li class="list-style">Monitoring existing credit accounts and performing periodic
-                                        reviews to assess ongoing credit risk and recommend adjustments to credit terms if
+                                        reviews to assess ongoing credit risk and recommend adjustments to credit terms
+                                        if
                                         necessary.</li>
                                     <li class="list-style">Maintaining accurate records and documentation of credit
                                         assessments and decisions for compliance and audit purposes.</li>
@@ -1107,15 +1166,20 @@
                                     Key Responsibilities:
                                     <br>
                                 <ul>
-                                    <li class="list-style">Representing the brands being marketed positively in different
+                                    <li class="list-style">Representing the brands being marketed positively in
+                                        different
                                         marketing strategies carried out.</li>
-                                    <li class="list-style">Participating in event planning aimed at marketing the brands and
+                                    <li class="list-style">Participating in event planning aimed at marketing the brands
+                                        and
                                         making sure the events run smoothly</li>
-                                    <li class="list-style">Issuing and keeping track of the available marketing merchandise
+                                    <li class="list-style">Issuing and keeping track of the available marketing
+                                        merchandise
                                         used.</li>
-                                    <li class="list-style">Creating other brand awareness strategies that would eventually
+                                    <li class="list-style">Creating other brand awareness strategies that would
+                                        eventually
                                         translate to an increase in sales.</li>
-                                    <li class="list-style">Providing updated feedback on how the marketing strategies have
+                                    <li class="list-style">Providing updated feedback on how the marketing strategies
+                                        have
                                         been executed backed up by the resulting product sales for analysis.</li>
                                 </ul>
                                 </p>
@@ -1138,17 +1202,22 @@
                                     </li>
                                     <li class="list-style">Retrieval and issuance of stored items from the stores to the
                                         authorized personnel.</li>
-                                    <li class="list-style">Clearance and collecting of returned items to the stores by the
+                                    <li class="list-style">Clearance and collecting of returned items to the stores by
+                                        the
                                         authorized staff.</li>
-                                    <li class="list-style">Arranging the items in the stores in an orderly manner for easy
+                                    <li class="list-style">Arranging the items in the stores in an orderly manner for
+                                        easy
                                         retrieval and issuance of the items.</li>
-                                    <li class="list-style">Participating in shortlisting trustworthy suppliers who can be
+                                    <li class="list-style">Participating in shortlisting trustworthy suppliers who can
+                                        be
                                         able to supply the government with the required products.</li>
-                                    <li class="list-style">Participating in approval of applied tenders by trusted suppliers
+                                    <li class="list-style">Participating in approval of applied tenders by trusted
+                                        suppliers
                                         of various items required by the government.</li>
                                     <li class="list-style">Receiving and directing walk-in supplier applicants who are
                                         willing to supply certain products to the government.</li>
-                                    <li class="list-style">Receiving and counter-checking products and items supplied to the
+                                    <li class="list-style">Receiving and counter-checking products and items supplied to
+                                        the
                                         government by the shortlisted suppliers.</li>
                                 </ul>
                                 </p>
@@ -1232,7 +1301,8 @@
                             <div class="skills-show content-card">
                                 <p class="show-list">
                                     :
-                                    Python | JavaScript | React JS | React Native | Next JS | Ruby | API Development | MySQL
+                                    Python | JavaScript | React JS | React Native | Next JS | Ruby | API Development |
+                                    MySQL
                                     | PostgreSQL | MongoDB | Git (Version Control) | Jest.
                                 </p>
                             </div>
@@ -1268,6 +1338,10 @@
                                 <button data-filter-btn>Web development</button>
                             </li>
 
+                            <li class="filter-item">
+                                <button data-filter-btn>Personal projects</button>
+                            </li>
+
                         </ul>
 
                         <div class="filter-select-box">
@@ -1296,6 +1370,10 @@
                                     <button data-select-item>Web development</button>
                                 </li>
 
+                                <li class="select-item">
+                                    <button data-select-item>Personal projects</button>
+                                </li>
+
                             </ul>
 
                         </div>
@@ -1309,30 +1387,37 @@
                             <div class="project-wrap">
                                 <li class="project-item  active" data-filter-item data-category="web development">
                                     <a href="https://tech-boffin.github.io/vepo-landing-page/" target="_blank">
-    
+
                                         <figure class="project-img">
                                             <div class="project-item-icon-box">
                                                 <ion-icon name="eye-outline"></ion-icon>
                                             </div>
-    
+
                                             <picture>
                                                 <source srcset="./assets/images/vepo.webp" type="image/webp">
-                                                <img src="./assets/images/vepo.jpg" alt="Vepo Clear Water" loading="lazy">
+                                                <img src="./assets/images/vepo.jpg" alt="Vepo Clear Water"
+                                                    loading="lazy">
                                             </picture>
                                         </figure>
-    
+
                                         <h3 class="project-title">Vepo Clear Water</h3>
-    
+
                                         <p class="project-category">Web development</p>
-    
+
                                     </a>
                                     <div class="project-btns">
                                         <!-- <a href="https://your-demo-link" target="_blank" class="github-btn">Github</a> -->
-                                        <a href="https://tech-boffin.github.io/vepo-landing-page/" target="_blank" class="demo-btn">Demo</a>
+                                        <a href="https://tech-boffin.github.io/vepo-landing-page/" target="_blank"
+                                            class="demo-btn">Demo</a>
                                     </div>
                                 </li>
                                 <div class="project-description">
-                                    <p>Vepo Clear Water project entails the creation of an application dedicated to vending bottled, purified, drinking water. This ongoing development focuses on crafting an intuitive and efficient platform to streamline the process of accessing clean drinking water for users. From ensuring user-friendly interfaces to implementing secure payment systems, the project aims to deliver a seamless experience for both vendors and consumers alike.</p>
+                                    <p>Vepo Clear Water project entails the creation of an application dedicated to
+                                        vending bottled, purified, drinking water. This ongoing development focuses on
+                                        crafting an intuitive and efficient platform to streamline the process of
+                                        accessing clean drinking water for users. From ensuring user-friendly interfaces
+                                        to implementing secure payment systems, the project aims to deliver a seamless
+                                        experience for both vendors and consumers alike.</p>
                                 </div>
                             </div>
 
@@ -1344,10 +1429,11 @@
                                             <div class="project-item-icon-box">
                                                 <ion-icon name="eye-outline"></ion-icon>
                                             </div>
-                                        
+
                                             <picture>
                                                 <source srcset="./assets/images/plutus-capital.webp" type="image/webp">
-                                                <img src="./assets/images/plutus-capital.jpg" alt="Plutus Capital" loading="lazy">
+                                                <img src="./assets/images/plutus-capital.jpg" alt="Plutus Capital"
+                                                    loading="lazy">
                                             </picture>
                                         </figure>
 
@@ -1357,13 +1443,19 @@
 
                                     </a>
                                     <div class="project-btns">
-                                        <a href="https://github.com/WinterJackson/Plutus_Capital" target="_blank" class="github-btn">Github</a>
+                                        <a href="https://github.com/WinterJackson/Plutus_Capital" target="_blank"
+                                            class="github-btn">Github</a>
                                         <a href="https://plutus.co.ke/" target="_blank" class="demo-btn">Demo</a>
                                     </div>
                                 </li>
                                 <div class="project-description">
                                     <p>
-                                        Worked together in a team project at Plutus Capital, crafting an advanced web platform for managing investments. Tasks involved creating backend algorithms and ensuring seamless integration between frontend and backend systems. Employed technologies like Python, Flask, SQL, and JavaScript. Produced a user-focused application that enhances investment strategies. Future objectives encompass integrating machine learning and broadening product offerings.</p>
+                                        Worked together in a team project at Plutus Capital, crafting an advanced web
+                                        platform for managing investments. Tasks involved creating backend algorithms
+                                        and ensuring seamless integration between frontend and backend systems. Employed
+                                        technologies like Python, Flask, SQL, and JavaScript. Produced a user-focused
+                                        application that enhances investment strategies. Future objectives encompass
+                                        integrating machine learning and broadening product offerings.</p>
                                 </div>
                             </div>
 
@@ -1375,13 +1467,14 @@
                                             <div class="project-item-icon-box">
                                                 <ion-icon name="eye-outline"></ion-icon>
                                             </div>
-                                        
+
                                             <picture>
                                                 <source srcset="./assets/images/bts-sizing-tool.webp" type="image/webp">
-                                                <img src="./assets/images/bts-sizing-tool.jpg" alt="bts-sizing-tool." loading="lazy">
+                                                <img src="./assets/images/bts-sizing-tool.jpg" alt="bts-sizing-tool."
+                                                    loading="lazy">
                                             </picture>
                                         </figure>
-                                        
+
 
                                         <h3 class="project-title">BTS Sizing Tool</h3>
 
@@ -1389,56 +1482,71 @@
 
                                     </a>
                                     <div class="project-btns">
-                                        <a href="https://github.com/WinterJackson/BTS-Sizing-Tool" target="_blank" class="github-btn">Github</a>
+                                        <a href="https://github.com/WinterJackson/BTS-Sizing-Tool" target="_blank"
+                                            class="github-btn">Github</a>
                                         <!-- <a href="https://tech-boffin.github.io/vepo-landing-page/" target="_blank" class="demo-btn">Demo</a> -->
                                     </div>
                                 </li>
                                 <div class="project-description">
-                                    <p>For a client, I developed a specialized calculator tool to streamline solar panel installations. This Python-based application, utilizing the tkinter library for UI styling, offered two primary functionalities: calculating the required number of solar panels and determining the appropriate battery specifications for each project. By inputting specific project requirements, users could obtain accurate estimations for panel quantity and battery size, facilitating efficient planning and execution of solar energy systems.</p>
+                                    <p>For a client, I developed a specialized calculator tool to streamline solar panel
+                                        installations. This Python-based application, utilizing the tkinter library for
+                                        UI styling, offered two primary functionalities: calculating the required number
+                                        of solar panels and determining the appropriate battery specifications for each
+                                        project. By inputting specific project requirements, users could obtain accurate
+                                        estimations for panel quantity and battery size, facilitating efficient planning
+                                        and execution of solar energy systems.</p>
                                 </div>
                             </div>
 
                             <div class="project-wrap">
-                                <li class="project-item  active" data-filter-item data-category="applications">
+                                <li class="project-item  active" data-filter-item data-category="personal projects">
                                     <a href="https://github.com/WinterJackson/Yikes-YTD" target="_blank">
 
                                         <figure class="project-img">
                                             <div class="project-item-icon-box">
                                                 <ion-icon name="eye-outline"></ion-icon>
                                             </div>
-                                        
+
                                             <picture>
                                                 <source srcset="./assets/images/yikes-ytd.webp" type="image/webp">
                                                 <img src="./assets/images/yikes-ytd.jpg" alt="Yikes YTD" loading="lazy">
                                             </picture>
                                         </figure>
-                                        
+
 
                                         <h3 class="project-title">Yikes YouTube Downloader</h3>
 
-                                        <p class="project-category">Applications</p>
+                                        <p class="project-category">Personal projects</p>
 
                                     </a>
                                     <div class="project-btns">
-                                        <a href="https://github.com/WinterJackson/Yikes-YTD" target="_blank" class="github-btn">Github</a>
-                                        <a href="https://winterjackson.github.io/site-yikes-ytd/index.html" target="_blank" class="demo-btn">Demo</a>
+                                        <a href="https://github.com/WinterJackson/Yikes-YTD" target="_blank"
+                                            class="github-btn">Github</a>
+                                        <a href="https://winterjackson.github.io/site-yikes-ytd/index.html"
+                                            target="_blank" class="demo-btn">Demo</a>
                                     </div>
                                 </li>
                                 <div class="project-description">
-                                    <p>Yikes YTD is my latest personal project, a versatile YouTube video downloader application designed to download both individual videos and entire playlists. Currently functional on Linux platforms, the application is undergoing development for compatibility with Windows and iOS. To accelerate its progress, I've made the project open-source, inviting contributions from fellow developers. This collaborative approach fosters innovation and ensures the project's continued enhancement and accessibility across various platforms.</p>
+                                    <p>Yikes YTD is my latest personal project, a versatile YouTube video downloader
+                                        application designed to download both individual videos and entire playlists.
+                                        Currently functional on Linux platforms, the application is undergoing
+                                        development for compatibility with Windows and iOS. To accelerate its progress,
+                                        I've made the project open-source, inviting contributions from fellow
+                                        developers. This collaborative approach fosters innovation and ensures the
+                                        project's continued enhancement and accessibility across various platforms.</p>
                                 </div>
                             </div>
 
 
                             <div class="project-wrap">
-                                <li class="project-item  active" data-filter-item data-category="web development">
+                                <li class="project-item  active" data-filter-item data-category="personal projects">
                                     <a href="https://all-currency-crypto.vercel.app/" target="_blank">
 
                                         <figure class="project-img">
                                             <div class="project-item-icon-box">
                                                 <ion-icon name="eye-outline"></ion-icon>
                                             </div>
-                                        
+
                                             <picture>
                                                 <source srcset="./assets/images/acc.webp" type="image/webp">
                                                 <img src="./assets/images/acc.jpg" alt="allCurrency" loading="lazy">
@@ -1447,16 +1555,62 @@
 
                                         <h3 class="project-title">allCurrency</h3>
 
+                                        <p class="project-category">Personal projects</p>
+
+                                    </a>
+                                    <div class="project-btns">
+                                        <a href="https://github.com/WinterJackson/allCurrencyCrypto" target="_blank"
+                                            class="github-btn">Github</a>
+                                        <a href="https://all-currency-crypto.vercel.app/" target="_blank"
+                                            class="demo-btn">Demo</a>
+                                    </div>
+                                </li>
+                                <div class="project-description">
+                                    <p>AllCurrency was one of my early projects, developed as a platform to provide
+                                        comprehensive information about global cryptocurrencies. Leveraging a free API,
+                                        the platform offered users access to real-time exchange rates, historical
+                                        exchange rate data, and a currency converter tool. Despite being one of my
+                                        initial projects during the learning phase, it served as an invaluable
+                                        opportunity to gain practical experience in web development and API integration.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="project-wrap">
+                                <li class="project-item  active" data-filter-item data-category="web development">
+                                    <a href="https://halali-meat.vercel.app/" target="_blank">
+
+                                        <figure class="project-img">
+                                            <div class="project-item-icon-box">
+                                                <ion-icon name="eye-outline"></ion-icon>
+                                            </div>
+
+                                            <picture>
+                                                <source srcset="./assets/images/Al-Barka%20Halali%20Meats-DARK.webp"
+                                                    type="image/webp">
+                                                <img src="./assets/images/Al-Barka%20Halali%20Meats-DARK.jpg"
+                                                    alt="Al-Barka Halali Meats" loading="lazy">
+                                            </picture>
+                                        </figure>
+
+                                        <h3 class="project-title">Al-Barka Halali Meats</h3>
+
                                         <p class="project-category">Web development</p>
 
                                     </a>
                                     <div class="project-btns">
-                                        <a href="https://github.com/WinterJackson/allCurrencyCrypto" target="_blank" class="github-btn">Github</a>
-                                        <a href="https://all-currency-crypto.vercel.app/" target="_blank" class="demo-btn">Demo</a>
+                                        <a href="https://github.com/WinterJackson/halali-meat" target="_blank"
+                                            class="github-btn">Github</a>
+                                        <a href="https://halali-meat.vercel.app/" target="_blank"
+                                            class="demo-btn">Demo</a>
                                     </div>
                                 </li>
                                 <div class="project-description">
-                                    <p>AllCurrency was one of my early projects, developed as a platform to provide comprehensive information about global cryptocurrencies. Leveraging a free API, the platform offered users access to real-time exchange rates, historical exchange rate data, and a currency converter tool. Despite being one of my initial projects during the learning phase, it served as an invaluable opportunity to gain practical experience in web development and API integration.</p>
+                                    <p>Al-Barka Halali Meats is a full-stack B2B web application engineered to modernize
+                                        the sales process for a wholesale meat supplier. Built with a robust, modern
+                                        stack including Next.js, React, and TypeScript, this platform replaces a
+                                        conventional shopping cart with a sophisticated, multi-step quoting system
+                                        tailored for bulk and custom orders.</p>
                                 </div>
                             </div>
 
@@ -1488,8 +1642,8 @@
 
                         <h3 class="h3 form-title">Contact Form</h3>
 
-                        <form target="_blank" action="https://formsubmit.co/9cb6998d3e9e2f27846e357fe43156c4" method="POST"
-                            class="form" data-form>
+                        <form target="_blank" action="https://formsubmit.co/9cb6998d3e9e2f27846e357fe43156c4"
+                            method="POST" class="form" data-form>
 
                             <div class="input-wrapper">
                                 <input type="text" name="fullname" class="form-input" placeholder="Full name" required
@@ -1530,65 +1684,16 @@
     -->
 
 
-    <script src="./assets/js/script.js"></script>
-    <script>
-        const spanYear = document.querySelector('#currentYear');
-        const currentYear = new Date();
-        spanYear.innerText = currentYear.getFullYear();
-    </script>
+    <!--
+    - custom js link
+  -->
+    <script type="module" src="./js/main.js"></script>
 
-    <script defer>
-        const observer1 = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                console.log(entry)
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show')
-                } else {
-                    entry.target.classList.remove('show')
-                }
-            });
-        })
-        const hiddenElements = document.querySelectorAll('.hidden');
-        hiddenElements.forEach((element) => observer1.observe(element));
-    </script>
     <!--
     - ionicon link
-    -->
+  -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script>
-        // Typing effect function
-        function typingEffect(element, text, speed) {
-            let i = 0;
-            const typingInterval = setInterval(() => {
-                if (i < text.length) {
-                    element.textContent += text.charAt(i);
-                    i++;
-                } else {
-                    clearInterval(typingInterval);
-                }
-            }, speed);
-        }
-
-        // Intersection Observer callback function
-        function startTyping(entries, observer) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const paragraph = entry.target.querySelector('.show-list');
-                    const text = paragraph.textContent;
-                    paragraph.style.display = 'inline-block'; 
-                    paragraph.textContent = ''; 
-                    typingEffect(paragraph, text, 50); 
-                    observer.unobserve(entry.target); 
-                }
-            });
-        }
-
-        // Intersection Observer
-        const observer = new IntersectionObserver(startTyping, { threshold: 0.7 });
-        const skillsShowDiv = document.querySelector('.skills-show');
-        observer.observe(skillsShowDiv);
-    </script>
 
 </body>
 

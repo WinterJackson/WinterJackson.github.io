@@ -1,0 +1,105 @@
+
+/* #RESET */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a { text-decoration: none; }
+
+li { list-style: none; }
+
+img, ion-icon, a, button, time, span { display: block; }
+
+button {
+  font: inherit;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  background: none;
+  font: inherit;
+}
+
+::selection {
+  background: #FF0000;
+  color: var(--smoky-black);
+}
+
+:focus { outline-color: #FF0000; }
+
+/* html block removed */
+html { font-family: var(--ff-poppins); }
+
+body { 
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  opacity: 0.9; 
+  background-image: linear-gradient(#ff000028, rgba(0, 0, 0, 0.95)), url("/assets/images/bg.svg");
+}
+
+section {
+  display: grid;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(20px); /* Start lower to slide UP */
+  transition: all 1s ease-out; /* Smoother ease-out */
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+@media(prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
+.skeleton {
+  opacity: .7;
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 70%);
+  }
+
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+}
+
+.copyright {
+  margin-bottom: 85px;
+  padding-left: 10px;
+  display: flex;
+  color: white;
+  max-width: 100%;
+  position: relative;
+}
+
+.cc-text {
+  display: flex;
+  max-width: 57%;
+  margin: 0 auto;
+}
+
+.cc-text p {
+  font-size: 10px;
+}

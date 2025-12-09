@@ -1,0 +1,91 @@
+/* Loading Overlay */
+#loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--eerie-black-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2147483647 !important;
+  transition: opacity 1s ease-out, visibility 1s ease-out;
+}
+
+#loading-overlay.fade-out {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+/* Mimic .container */
+.overlay-content {
+  display: flex;
+  overflow: hidden;
+  max-width: 300px; /* Slightly larger for overlay presence */
+  max-height: 300px;
+}
+
+/* Mimic .box */
+.overlay-box {
+  width: 250px; /* Scaled up slightly from sidebar's 220px */
+  height: 250px;
+  position: relative;
+  padding: 15px;
+}
+
+/* Mimic .spin-container */
+.overlay-spin-container {
+  width: 100%;
+  height: 100%;
+  animation: spin 12s ease-in-out infinite alternate;
+  position: relative;
+}
+
+/* Mimic .shape */
+.overlay-shape {
+  border: 1px solid red;
+  background-color: #ffeebf;
+  width: 100%;
+  height: 100%;
+  transition: border-radius 1s ease-out;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  animation: morph 25s ease-in-out infinite both alternate;
+  position: absolute;
+  overflow: hidden;
+  z-index: 5;
+}
+
+/* Mimic .avatar-box */
+.overlay-avatar-box {
+  width: 142%;
+  height: 142%;
+  position: absolute;
+  left: -21%;
+  top: -21%;
+  /* Removed background-image to use video */
+  /* Re-added counter-rotation so video stays upright while border spins */
+  animation: spin 12s ease-in-out infinite alternate-reverse;
+  opacity: 1;
+  z-index: 2;
+  scale: 0.7;
+}
+
+/* Ensure video fills the box */
+.avatar-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+/* Keyframes - reused from global if available, but defined here for safety */
+@keyframes morph {
+  0% { border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%; } 
+  50% { border-radius: 60% 40% 40% 60% / 50% 30% 60% 50%; }
+  100% { border-radius: 40% 60%; } 
+}
+
+@keyframes spin {
+  to { transform: rotate(1turn); }
+}

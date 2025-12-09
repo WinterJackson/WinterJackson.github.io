@@ -1,0 +1,27 @@
+/* #SUCCESS PAGE */
+
+.success-container {
+  color: var(--white-2);
+}
+
+.success-div {
+  background: rgba(169, 169, 169, 0.137);
+  border: 1px solid var(--jet);
+  border-radius: 25px 50px / 50px;
+  min-height: 50vh;
+  padding: 50px;
+  box-shadow: var(--shadow-1);
+  color: var(--white-2);
+  margin: 0 auto;
+}
+
+.success-msg {
+  background: rgba(0, 0, 0, 0.336);
+  padding: 20px;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+}
+
+.success-msg p {
+  font-size: 40px;
+}

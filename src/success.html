@@ -16,7 +16,7 @@
     <!--
     - custom css link
     -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 
     <!--
     - google font link
@@ -42,20 +42,20 @@
 
                 <div class="sidebar-info">
 
-                <div class="container">
-                    <div class="box">
-                        <div class="spin-container">
-                            <div class="shape">
-                                <div class="avatar-box">
-                                    <!-- <picture>
+                    <div class="container">
+                        <div class="box">
+                            <div class="spin-container">
+                                <div class="shape">
+                                    <div class="avatar-box">
+                                        <!-- <picture>
                                         <source srcset="./assets/images/my-avatar.webp" type="image/webp">
                                         <img src="./assets/images/my-avatar.png" alt="Winter Jackson" width="80">
                                     </picture> -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
                     <div class="info-content">
                         <h1 class="name" title="Winter Jackson">Winter Jackson</h1>
@@ -172,11 +172,11 @@
             <div class="main-content success-page fade-in ">
                 <div class="success-container">
                     <div class="success-div">
-            
+
                         <header>
                             <h2 class="h2 article-title">Contact</h2>
                         </header>
-            
+
                         <section class="success-msg">
                             <span>Message sent successfully!</span>
                             <br>
@@ -187,10 +187,10 @@
                                 <strong>Thank You for contacting me!</strong>
                             </p>
                             <span>I will reply to you shortly. Keep calm.</span>
-            
+
                         </section>
-                        <button class="back-btn" onclick="goBack()">Go Back!</button>
-            
+                        <button class="back-btn" onclick="history.back()">Go Back!</button>
+
                     </div>
                 </div>
             </div>
@@ -208,65 +208,13 @@
     -->
 
 
-    <script src="./assets/js/script.js"></script>
-    <script>
-        const spanYear = document.querySelector('#currentYear');
-        const currentYear = new Date();
-        spanYear.innerText = currentYear.getFullYear();
-    </script>
+    <script type="module" src="./js/main.js"></script>
 
-    <script defer>
-        const observer1 = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                console.log(entry)
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show')
-                } else {
-                    entry.target.classList.remove('show')
-                }
-            });
-        })
-        const hiddenElements = document.querySelectorAll('.hidden');
-        hiddenElements.forEach((element) => observer1.observe(element));
-    </script>
     <!--
     - ionicon link
     -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script>
-        // Typing effect function
-        function typingEffect(element, text, speed) {
-            let i = 0;
-            const typingInterval = setInterval(() => {
-                if (i < text.length) {
-                    element.textContent += text.charAt(i);
-                    i++;
-                } else {
-                    clearInterval(typingInterval);
-                }
-            }, speed);
-        }
-
-        // Intersection Observer callback function
-        function startTyping(entries, observer) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const paragraph = entry.target.querySelector('.show-list');
-                    const text = paragraph.textContent;
-                    paragraph.style.display = 'inline-block'; 
-                    paragraph.textContent = ''; 
-                    typingEffect(paragraph, text, 50); 
-                    observer.unobserve(entry.target); 
-                }
-            });
-        }
-
-        // Intersection Observer
-        const observer = new IntersectionObserver(startTyping, { threshold: 0.7 });
-        const skillsShowDiv = document.querySelector('.skills-show');
-        observer.observe(skillsShowDiv);
-    </script>
 
 </body>
 
